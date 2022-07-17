@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fff0bf;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DashboardController">
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: #ffcf66;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Dealer's Dashboad">
+               <font>
+                  <Font name="Century Gothic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #ffcf66;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="12.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="33.0" prefWidth="75.0" style="-fx-background-color: #ffb442;" text="Log Off">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#ff8400" height="5.0" radius="2.0" spread="1.0" width="5.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></AnchorPane>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="448.0" prefWidth="800.0" vbarPolicy="ALWAYS">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="587.0" style="-fx-background-color: #fff0bf;">
+                                 <children>
+                                    <BorderPane prefHeight="434.0" prefWidth="789.0" style="-fx-background-color: #fff0bf;">
+                                       <top>
+                                          <AnchorPane prefHeight="19.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="11.0" text="View Customers">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                       <center>
+                                          <AnchorPane prefHeight="395.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TableView fx:id="tableView" layoutX="8.0" layoutY="13.0" prefHeight="387.0" prefWidth="774.0" style="-fx-background-color: #ffcf66;">
+                                                   <columns>
+                                                      <TableColumn fx:id="name" prefWidth="75.0" text="First Name" />
+                                                      <TableColumn fx:id="lname" prefWidth="75.0" text="Last Name" />
+                                                      <TableColumn fx:id="gmail" prefWidth="120.0" text="E-mail" />
+                                                      <TableColumn fx:id="phone" prefWidth="100.0" text="Phone#" />
+                                                      <TableColumn fx:id="CNIC" prefWidth="177.0" text="CNIC" />
+                                                      <TableColumn fx:id="address" prefWidth="223.0" text="Address" />
+                                                   </columns></TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Test Drive Forms">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="450.0" prefWidth="800.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="587.0">
+                                 <children>
+                                    <BorderPane prefHeight="449.0" prefWidth="789.0" style="-fx-background-color: #fff0bf;">
+                                       <top>
+                                          <AnchorPane prefHeight="19.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="11.0" text="Manage Test Drive Forms">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                       <center>
+                                          <AnchorPane prefHeight="410.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TableView fx:id="tableView2" layoutX="8.0" layoutY="51.0" prefHeight="348.0" prefWidth="778.0" style="-fx-background-color: #ffcf66;">
+                                                   <columns>
+                                                      <TableColumn fx:id="firstName2" prefWidth="75.0" text="First Name" />
+                                                      <TableColumn fx:id="lastName2" prefWidth="82.0" text="Last Name" />
+                                                      <TableColumn fx:id="email2" prefWidth="58.0" text="Email" />
+                                                      <TableColumn fx:id="phone2" prefWidth="75.0" text="Phone" />
+                                                      <TableColumn fx:id="vehicle" prefWidth="117.0" text="Vehicle" />
+                                                      <TableColumn fx:id="outlet" prefWidth="100.0" text="Outlet" />
+                                                      <TableColumn fx:id="CNIC2" minWidth="2.0" prefWidth="106.0" text="CNIC" />
+                                                      <TableColumn fx:id="date" minWidth="2.0" prefWidth="152.0" text="Date" />
+                                                      <TableColumn fx:id="time" minWidth="2.0" prefWidth="12.0" text="Time" visible="false" />
+                                                   </columns>
+                                                   <cursor>
+                                                      <Cursor fx:constant="DEFAULT" />
+                                                   </cursor>
+                                                </TableView>
+                                                <TextField fx:id="emailTextField" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="283.0" promptText="Enter email..." style="-fx-background-color: #ffffff;">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button layoutX="372.0" layoutY="15.0" mnemonicParsing="false" onAction="#ConfirmOnAction" style="-fx-background-color: #76ff36;" text="Confirm" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Button layoutX="303.0" layoutY="15.0" mnemonicParsing="false" onAction="#DenyOnAction" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #ff3636;" text="Deny" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Manage Bookings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="455.0" prefWidth="800.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="587.0">
+                                 <children>
+                                    <BorderPane prefHeight="451.0" prefWidth="789.0" style="-fx-background-color: #fff0bf;">
+                                       <top>
+                                          <AnchorPane prefHeight="19.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="15.0" layoutY="11.0" text="Manage Bookings">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                       <center>
+                                          <AnchorPane prefHeight="405.0" prefWidth="767.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TableView fx:id="tableView3" layoutX="8.0" layoutY="62.0" prefHeight="324.0" prefWidth="473.0" style="-fx-background-color: #ffcf66;">
+                                                   <columns>
+                                                      <TableColumn fx:id="fname3" prefWidth="75.0" text="First Name" />
+                                                      <TableColumn fx:id="lname3" prefWidth="75.0" text="Last Name" />
+                                                      <TableColumn fx:id="email3" prefWidth="75.0" text="Email" />
+                                                      <TableColumn fx:id="phone3" prefWidth="98.0" text="Phone#" />
+                                                      <TableColumn fx:id="buyingOption" minWidth="2.0" prefWidth="144.0" text="Buying Option" />
+                                                   </columns>
+                                                </TableView>
+                                                <TextField fx:id="emailTextField1" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="283.0" promptText="Enter email..." style="-fx-background-color: #ffffff;">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button layoutX="378.0" layoutY="24.0" mnemonicParsing="false" onAction="#ConfirmOnAction1" style="-fx-background-color: #76ff36;" text="Confirm" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Button layoutX="312.0" layoutY="24.0" mnemonicParsing="false" onAction="#DenyOnAction1" prefHeight="23.0" prefWidth="57.0" style="-fx-background-color: #ff3636;" text="Deny" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Century Gothic Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <TableView fx:id="tableView4" layoutX="501.0" layoutY="62.0" prefHeight="324.0" prefWidth="270.0" style="-fx-background-color: #ffcf66;">
+                                                  <columns>
+                                                    <TableColumn fx:id="vName" prefWidth="55.0" text="Name" />
+                                                    <TableColumn fx:id="vcolor" prefWidth="56.0" text="Color" />
+                                                      <TableColumn fx:id="vtype" prefWidth="65.0" text="Type" />
+                                                      <TableColumn fx:id="vmodel" prefWidth="45.0" text="Model" />
+                                                      <TableColumn fx:id="vcost" prefWidth="45.0" text="Cost" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TabPane>
+   </center>
+</BorderPane>
